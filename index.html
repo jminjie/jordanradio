@@ -9,7 +9,7 @@
     <p>
     Join us on Sunday April 26th at 7:30 pm PT for a reading of "Charles Francis Chan Jr.'s Exotic Oriental Murder Mystery" by Lloyd Suh as well as a post-reading discussion on the material with the house mates. Previous plays in this series include "Wolf Play" by Hansol Jung, "Disgraced" by Ayad Akhtar, "Durango" by Julia Cho, "Stop Kiss" by Diana Son and many more.
     </p>
-    <p>We are currently <b><span id="air" style="color:red"></span></b></p>
+    <p>We are currently <b><span id="air"></span></b></p>
     <p>
     Do you hear <a href="https://www.sijia.how/2019/04/cricket-inauguration-part-1-begin.html">crickets</a>?
     <div class="audioplayer"><audio controls="controls" preload="none"><source src="http://jminjie.com:5002/stream" type="audio/ogg"></source></audio></div>
@@ -18,8 +18,10 @@
     .then(res => {
         if (res.ok) {
             document.getElementById("air").innerHTML = "ON AIR";
+            document.getElementById("air").style.color = "green";
         } else {
             document.getElementById("air").innerHTML = "OFF AIR";
+            document.getElementById("air").style.color = "red";
         }
     }).catch(err => console.log('Error:', err));
     </script>
